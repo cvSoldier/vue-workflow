@@ -1,0 +1,10 @@
+$itemColor: #57b6ec;
+$itemHeight: 40px;
+$itemMargin: 10px;
+$borderWidth: $itemHeight / 2;
+$tailScale: 4 / 24;
+$itemWidth: $borderWidth * 2 / $tailScale;
+/* 整体宽=尾部的宽/尾部占比*/
+$bigCircleWidth: 30px;
+$smallCircleWidth: 20px;
+$middleHeight: 4 * $bigCircleWidth;

@@ -1,0 +1,39 @@
+@import './index.scss';
+
+
+.workflow-container {
+  opacity: 0;
+  float: left;
+  width: $itemWidth - 30px;
+  position: relative;
+  margin-bottom: 10px;
+  height: ($bigCircleWidth + $middleHeight + $smallCircleWidth) * 2 + $itemMargin * 2 + $itemHeight
+}
+
+.row-style {
+  width: $itemWidth;
+  position: absolute;
+  top: ($bigCircleWidth + $middleHeight + $smallCircleWidth) + $itemMargin;
+
+  .item-tail {
+    width: 0;
+    height: 0;
+    border: $borderWidth solid;
+    border-color: $itemColor $itemColor $itemColor transparent;
+  }
+
+  .item-body {
+    height: $itemHeight;
+    line-height: $itemHeight;
+    background-color: $itemColor;
+    color: white;
+    text-indent: -0.3em;
+  }
+
+  .item-head {
+    width: 0;
+    height: 0;
+    border: $borderWidth solid;
+    border-color: transparent transparent transparent $itemColor;
+  }
+}
