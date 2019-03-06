@@ -2,6 +2,11 @@
   "name": "vue-workflow",
   "version": "0.1.6",
   "private": false,
+  "author": "wangyanchao <610496306@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cvSoldier/vue-workflow"
+  },
   "keyword": [
     "vue",
     "workflow",
@@ -9,8 +14,7 @@
   ],
   "files": [
     "dist",
-    "src",
-    "packages"
+    "package.json"
   ],
   "main": "./dist/vue-workflow.common.js",
   "scripts": {
