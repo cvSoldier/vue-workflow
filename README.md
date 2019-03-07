@@ -9,10 +9,10 @@ A component to show the workflow with Vue 2.6.6
 ### 5.认真制作demo.gif
 
 ## 1.安装
-*npm install vue-workflow*
+`npm install vue-workflow`
 
 ## 2.使用
-#### 使用样例参照src/App.vue
+#### 使用样例参照*src/App.vue*
 
 ## 3·效果图
-![image](https://github.com/cvSoldier/vue-workflow/src/assets/demo.gif)
+![效果图](https://github.com/cvSoldier/vue-workflow/blob/master/src/assets/demo.gif)
