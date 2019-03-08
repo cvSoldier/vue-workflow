@@ -1737,12 +1737,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/index.vue?vue&type=template&id=1e4e6a4b&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._l((_vm.data),function(item,index){return _c('FlowItem',{key:item.id,attrs:{"data":item,"index":index,"top-or-bottom":index % 2 === 0}},[_vm._t("default",null,{"item":item})],2)}),1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/index.vue?vue&type=template&id=5f2f113e&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"overflow":"hidden"}},_vm._l((_vm.data),function(item,index){return _c('FlowItem',{key:item.id,attrs:{"data":item,"index":index,"top-or-bottom":index % 2 === 0}},[_vm._t("default",null,{"item":item})],2)}),1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/index.vue?vue&type=template&id=1e4e6a4b&scoped=true&
+// CONCATENATED MODULE: ./src/components/index.vue?vue&type=template&id=5f2f113e&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FlowItem.vue?vue&type=template&id=8a0ae584&scoped=true&
 var FlowItemvue_type_template_id_8a0ae584_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"workflow-container",style:(_vm.animation)},[(_vm.topOrBottom)?_c('TopBranch',[_vm._t("default")],2):_vm._e(),_c('div',{staticClass:"row-style wyc-row"},[_vm._m(0),_c('div',{staticClass:"wyc-col-16"},[_c('div',{staticClass:"item-body"},[_vm._v("\n        "+_vm._s(_vm.data.dealTime)+"\n      ")])]),_vm._m(1)]),(!_vm.topOrBottom)?_c('BottomBranch',[_vm._t("default")],2):_vm._e()],1)}
@@ -2102,7 +2102,7 @@ var components_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "1e4e6a4b",
+  "5f2f113e",
   null
   
 )
