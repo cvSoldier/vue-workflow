@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow: hidden">
     <FlowItem
       v-for="(item, index) in data"
       :key="item.id"
