@@ -15,21 +15,21 @@
   width: $bigCircleWidth;
   height: $bigCircleWidth;
   border-radius: $bigCircleWidth / 2;
-  border: 1px solid $itemColor;
+  border: 1px solid $itemBgColor;
   display: flex;
 
   .big-inside {
     width: $smallCircleWidth;
     height: $smallCircleWidth;
-    background: $itemColor;
+    background: $itemBgColor;
     border-radius: $smallCircleWidth / 2;
-    border: 1px solid $itemColor;
+    border: 1px solid $itemBgColor;
     margin: auto;
   }
 }
 
 .middle {
-  border-left: 1px solid $itemColor;
+  border-left: 1px solid $itemBgColor;
   height: $middleHeight;
   margin-left: $bigCircleWidth / 2;
   position: absolute;
@@ -53,9 +53,9 @@
 .smallCircle {
   width: $smallCircleWidth;
   height: $smallCircleWidth;
-  background: $itemColor;
+  background: $itemBgColor;
   border-radius: $smallCircleWidth / 2;
-  border: 1px solid $itemColor;
+  border: 1px solid $itemBgColor;
   margin-left: ($bigCircleWidth - $smallCircleWidth) / 2;
 }
 

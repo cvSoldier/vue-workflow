@@ -2,12 +2,21 @@
   <div
     :style="animation"
     class="workflow-container"
+    :class="typeClass"
   >
-    <TopBranch
-      v-if="topOrBottom"
+    <div
+      v-if="showTopOrBottomBranch"
+      class="top-branch-container"
     >
-    <slot />
-    </TopBranch>
+      <div class="bigCircle">
+        <div class="big-inside" />
+      </div>
+      <div class="middle">
+        <slot />
+      </div>
+      <div class="smallCircle bottom" />
+    </div>
+
     <div class="row-style wyc-row">
       <div class="wyc-col-4">
         <div class="item-tail" />
@@ -21,39 +30,73 @@
         <div class="item-head" />
       </div>
     </div>
-    <BottomBranch
-      v-if="!topOrBottom"
+
+    <div
+      v-if="!showTopOrBottomBranch"
+      class="bottom-branch-container"
     >
-      <slot />
-    </BottomBranch>
+      <div class="smallCircle" />
+      <div class="middle">
+        <slot />
+      </div>
+      <div class="bigCircle bottom">
+        <div class="big-inside" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import TopBranch from './TopBranch.vue'
-import BottomBranch from './BottomBranch.vue'
 export default {
   name: 'WorkflowItem',
-  components: {
-    TopBranch, BottomBranch
-  },
   props: {
     data: {
       type: Object,
       required: true
     },
-    topOrBottom: {
+    firstBottom: {
       type: Boolean,
-      required: true
+      default: false
     },
     index: {
       type: Number,
       required: true
+    },
+    type: {
+      type: String,
+      default: 'primary',
+      validator: function(value) {
+        return [
+          'primary',
+          'warning',
+          'danger',
+          'info',
+          'success'
+        ].indexOf(value) !== -1
+      }
     }
   },
   data() {
     return {
       animation: undefined
+    }
+  },
+  computed: {
+    showTopOrBottomBranch() {
+      if (!this.$props.firstBottom) {
+        return this.$props.index % 2 === 0
+      } else {
+        return this.$props.index % 2 !== 0
+      }
+    },
+    typeClass() {
+      switch (this.$props.type) {
+        case 'danger': return { 'workflow--danger': true }
+        case 'info': return { 'workflow--info': true }
+        case 'primary': return { 'workflow--primary': true }
+        case 'success': return { 'workflow--success': true }
+        case 'warning': return { 'workflow--warning': true }
+      }
     }
   },
   mounted() {
@@ -75,7 +118,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./styles/item.scss";
+@import "./types/danger.scss";
+@import "./types/info.scss";
+@import "./types/primary.scss";
+@import "./types/success.scss";
+@import "./types/warning.scss";
 .wyc-row {
   position: relative;
   box-sizing: border-box;
