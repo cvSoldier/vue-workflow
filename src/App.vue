@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <Workflow
-      :data="workflows"
-    >
-     <template v-slot:default="slotProps">
-      <span class="title"> {{ slotProps.item.flowNode }} </span>
-      <span> 处理人：{{ slotProps.item.dealUserName }} </span>
-      <span> 处理部门：{{ slotProps.item.dealOrgName }} </span>
-      <span> {{ slotProps.item.dealContent }} </span>
-     </template>
+    <Workflow :data="workflows">
+      <template v-slot:default="slotProps">
+        <span class="title"> {{ slotProps.item.flowNode }} </span>
+        <span> 处理人：{{ slotProps.item.dealUserName }} </span>
+        <span> 处理部门：{{ slotProps.item.dealOrgName }} </span>
+        <span> {{ slotProps.item.dealContent }} </span>
+      </template>
     </Workflow>
   </div>
 </template>

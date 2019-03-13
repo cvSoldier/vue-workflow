@@ -19,14 +19,14 @@
     width: 0;
     height: 0;
     border: $borderWidth solid;
-    border-color: $itemColor $itemColor $itemColor transparent;
+    border-color: $itemBgColor $itemBgColor $itemBgColor transparent;
   }
 
   .item-body {
     height: $itemHeight;
     line-height: $itemHeight;
-    background-color: $itemColor;
-    color: white;
+    background-color: $itemBgColor;
+    color: $fontColor;
     text-indent: -0.3em;
   }
 
@@ -34,6 +34,6 @@
     width: 0;
     height: 0;
     border: $borderWidth solid;
-    border-color: transparent transparent transparent $itemColor;
+    border-color: transparent transparent transparent $itemBgColor;
   }
 }
